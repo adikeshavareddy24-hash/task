@@ -1,0 +1,90 @@
+﻿<html>
+<head>
+
+</head>
+<body>
+    <style>
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 9px;
+        }
+
+            .form-group label {
+                width: 150px;
+            }
+
+            .form-group input {
+                width: 200px;
+            }
+    </style>
+    <p>@ViewBag.Message</p>
+    <input type="hidden" id="idlabl" value="0" />
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" id="nametxt" />
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" id="txt_Email" />
+    </div>
+    <div class="form-group">
+        <label>Course</label>
+        <input type="text" id="txt_cours" />
+    </div>
+    <div class="form-group">
+        <label>phonenumber</label>
+        <input type="text" id="txt_phone" />
+    </div>
+
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" id="psw_password" />
+    </div>
+
+    <div class="form-group">
+        <label>Confirm Password</label>
+        <input type="password" id="psw_cnfpassword" />
+    </div>
+    <span id="spnname" style="color:red"></span>
+    <button id="btnid" style="background-color:blue">Register</button>
+    <button id="detailsid" style="background-color:blue">Get details</button>
+    <button id="updateid" style="background-color:blue">Update details</button>
+
+
+</body>
+</html>
+<head>
+    <style>
+        table,th,tr,td{
+            border:1px solid black;
+        }
+    </style>
+</head>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Course</th>
+            <th>phonenumber</th>
+            <th>edit</th>
+            <th>delete</th>
+        </tr>
+    </thead>
+    <tbody id="tbbody">
+
+    </tbody>
+</table>
+<script src="~/Scripts/jquery..js"></script>
+
+<script src="~/Scripts/jquery-3.7.0.min.js"></script>
+<script src="~/Scripts/studentcrudoperations.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        studentcrudoperation.init()
+    })
+</script>
+
